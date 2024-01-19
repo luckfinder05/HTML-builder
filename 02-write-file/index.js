@@ -4,7 +4,7 @@ const path = require('path');
 const file = path.resolve(__dirname, 'text.txt');
 
 const fileStream = fs.createWriteStream(file, {
-  flags: 'a',
+  flags: 'w',
   encoding: 'utf-8',
 });
 const stdin = process.stdin;
