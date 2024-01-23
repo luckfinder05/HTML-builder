@@ -21,7 +21,7 @@ stdout.write('> ');
 
 stdin.on('data', function (chunk) {
   const result = chunk.toString();
-  if (result === 'exit\u000d\u000a') {
+  if (result === 'exit\u000d\u000a' || result === 'exit\n') {
     closeApp(fileStream);
   }
   fileStream.write(chunk);
